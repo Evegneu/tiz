@@ -1,0 +1,52 @@
+﻿<Window x:Class="WSR2.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WSR2"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="800">
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <TextBox Text="Введите для поиска" Height="30" Width="200" Padding="5 5 5 5"></TextBox>
+            <ComboBox x:Name="Combo1" Text="Сортировка" Height="30" Width="200" Padding="5 5 5 5"></ComboBox>
+            <ComboBox x:Name="Combo2" Text="Сортировка" Height="30" Width="200" Padding="5 5 5 5">
+                <ComboBoxItem Content="kjk"/>
+            </ComboBox>
+        </StackPanel>
+        <ListBox x:Name="MyListBox" IsEnabled="True" Padding="10" Grid.Row="1">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel Orientation="Vertical">
+                            <Image Margin="0 0 10 0" Width="100" Source="C:\Users\student\Desktop\Новая папка\3-4 На выбор\КОД 1.2._ВАРИАНТ_1\Сессия 2\picture.png"></Image>
+                        </StackPanel>
+                        <StackPanel>
+                            <TextBlock Text="Наименование: "></TextBlock>
+                            <TextBlock Text="Описание: "/>
+                            <TextBlock Text="Артикул: "></TextBlock>
+                        </StackPanel>
+                        <StackPanel Width="400">
+                            <TextBlock Text="{Binding ProductName}"/>
+                            <TextBlock Text="{Binding ProductDescription}"/>
+                            <TextBlock Text="{Binding ProductArticleNumber}"/>
+                        </StackPanel>
+                        <StackPanel>
+                            <TextBlock Text="Стоимость: "></TextBlock>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding ProductCost}"/>
+                            <TextBlock Text=" Руб."/>
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Frame x:Name="Frame2"></Frame>
+
+    </Grid>
+</Window>

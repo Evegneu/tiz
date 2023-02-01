@@ -1,0 +1,32 @@
+﻿<Window x:Class="WSR2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WSR2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0" Background="#B0E5FD"></Border>
+        <Border Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Background="#B0E5FD"></Border>
+        <Image Margin="5 5 200 5" Width="100" Source="C:\Users\student\Desktop\Новая папка\3-4 На выбор\КОД 1.2._ВАРИАНТ_1\Общие ресурсы\Намордник (2).ico"></Image>
+        <TextBox Background="#B0E5FD" Name="loginBox" Grid.Column="1" Grid.Row="2" Text="Login" FontSize="32" Margin="5 5 5 5" FontFamily="Tw Cen MT"></TextBox>
+        <TextBox Background="#B0E5FD" Name="passwordBox" Grid.Column="1" Grid.Row="3" Text="Password" FontSize="32" Margin="5 5 5 5" FontFamily="Tw Cen MT"></TextBox>
+        <Button Background="#FDBD40" Grid.Column="1" Grid.Row="4" FontSize="32" Margin="5 5 5 5" Click="Button_Click" FontFamily="Tw Cen MT">Auth</Button>
+        <Frame x:Name="Frame1"></Frame>
+        
+    </Grid>
+</Window>
